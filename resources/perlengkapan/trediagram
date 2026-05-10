@@ -1,0 +1,110 @@
+sewaalatahmadi/
+│
+├── app/
+│   ├── Http/
+│   │   ├── Controllers/
+│   │   │
+│   │   ├── Auth/
+│   │   │   ├── LoginUserController.php
+│   │   │   ├── LoginPenyewaController.php
+│   │   │   ├── RegisterPenyewaController.php
+│   │   │   └── LogoutController.php
+│   │   │
+│   │   ├── Landing/
+│   │   │   ├── HomeController.php
+│   │   │   ├── ArtikelController.php
+│   │   │   ├── KategoriController.php
+│   │   │   └── KontakController.php
+│   │   │
+│   │   ├── User/
+│   │   │   ├── DashboardController.php
+│   │   │   │
+│   │   │   ├── Master/
+│   │   │   │   ├── UserController.php
+│   │   │   │   ├── PenyewaController.php
+│   │   │   │   ├── KategoriController.php
+│   │   │   │   ├── MerkController.php
+│   │   │   │   ├── KondisiController.php
+│   │   │   │   └── AlatController.php
+│   │   │   │
+│   │   │   ├── Transaksi/
+│   │   │   │   ├── PemesananController.php
+│   │   │   │   ├── PembayaranController.php
+│   │   │   │   └── DendaController.php
+│   │   │   │
+│   │   │   ├── Artikel/
+│   │   │   │   ├── ArtikelController.php
+│   │   │   │   └── KomentarController.php
+│   │   │   │
+│   │   │   └── Laporan/
+│   │   │       ├── LaporanBulananController.php
+│   │   │       ├── LaporanTahunanController.php
+│   │   │       └── LaporanArusKasController.php
+│   │   │
+│   │   ├── Penyewa/
+│   │   │   ├── DashboardController.php
+│   │   │   ├── ProfilController.php
+│   │   │   ├── PemesananController.php
+│   │   │   └── PembayaranController.php
+│   │   │
+│   │   └── Middleware/
+│   │       ├── RoleMiddleware.php
+│   │       └── PenyewaMiddleware.php
+│   │
+│   ├── Models/
+│   │   ├── User.php
+│   │   ├── Penyewa.php
+│   │   ├── Kategori.php
+│   │   ├── Merk.php
+│   │   ├── Kondisi.php
+│   │   ├── Alat.php
+│   │   ├── Pemesanan.php
+│   │   ├── DetailPemesanan.php
+│   │   ├── Pembayaran.php
+│   │   ├── Denda.php
+│   │   ├── Artikel.php
+│   │   └── Komentar.php
+│
+├── database/
+│   ├── migrations/
+│   │   ├── create_users_table.php
+│   │   ├── create_penyewas_table.php
+│   │   ├── create_kategoris_table.php
+│   │   ├── create_merks_table.php
+│   │   ├── create_kondisis_table.php
+│   │   ├── create_alats_table.php
+│   │   ├── create_pemesanans_table.php
+│   │   ├── create_detail_pemesanans_table.php
+│   │   ├── create_pembayarans_table.php
+│   │   ├── create_dendas_table.php
+│   │   ├── create_artikels_table.php
+│   │   └── create_komentars_table.php
+│   │
+│   └── seeders/
+│       ├── UserSeeder.php
+│       ├── PenyewaSeeder.php
+│       └── DatabaseSeeder.php
+│
+├── resources/
+│   ├── views/
+│   │
+│   │   ├── layouts/
+│   │   │   ├── guest.blade.php
+│   │   │   ├── user.blade.php
+│   │   │   └── penyewa.blade.php
+│   │
+│   │   ├── components/
+│   │   │   ├── navbar/
+│   │   │   ├── sidebar/
+│   │   │   └── footer/
+│   │
+│   │   ├── landing/
+│   │   ├── auth/
+│   │   ├── user/
+│   │   ├── penyewa/
+│   │   └── errors/
+│
+├── routes/
+│   ├── web.php
+│   ├── user.php
+│   └── penyewa.php
