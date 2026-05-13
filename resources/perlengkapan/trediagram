@@ -1,4 +1,4 @@
-sewaalatahmadi/
+peminjamanalat/
 │
 ├── app/
 │   ├── Http/
@@ -6,61 +6,68 @@ sewaalatahmadi/
 │   │   │
 │   │   ├── Auth/
 │   │   │   ├── LoginUserController.php
-│   │   │   ├── LoginPenyewaController.php
-│   │   │   ├── RegisterPenyewaController.php
+│   │   │   ├── LoginAnggotaController.php
+│   │   │   ├── RegisterAnggotaController.php
 │   │   │   └── LogoutController.php
 │   │   │
 │   │   ├── Landing/
 │   │   │   ├── HomeController.php
 │   │   │   ├── ArtikelController.php
 │   │   │   ├── KategoriController.php
-│   │   │   └── KontakController.php
+│   │   │   ├── KontakController.php
+│   │   │   └── TentangController.php
 │   │   │
 │   │   ├── User/
 │   │   │   ├── DashboardController.php
 │   │   │   │
 │   │   │   ├── Master/
 │   │   │   │   ├── UserController.php
-│   │   │   │   ├── PenyewaController.php
+│   │   │   │   ├── AnggotaController.php
 │   │   │   │   ├── KategoriController.php
 │   │   │   │   ├── MerkController.php
 │   │   │   │   ├── KondisiController.php
-│   │   │   │   └── AlatController.php
+│   │   │   │   ├── AlatController.php
+│   │   │   │   └── RuanganController.php
 │   │   │   │
 │   │   │   ├── Transaksi/
-│   │   │   │   ├── PemesananController.php
-│   │   │   │   ├── PembayaranController.php
-│   │   │   │   └── DendaController.php
+│   │   │   │   ├── PeminjamanController.php
+│   │   │   │   ├── DetailPeminjamanController.php
+│   │   │   │   ├── PengembalianController.php
+│   │   │   │   ├── DendaController.php
+│   │   │   │   └── PersetujuanController.php
 │   │   │   │
 │   │   │   ├── Artikel/
 │   │   │   │   ├── ArtikelController.php
 │   │   │   │   └── KomentarController.php
 │   │   │   │
 │   │   │   └── Laporan/
-│   │   │       ├── LaporanBulananController.php
-│   │   │       ├── LaporanTahunanController.php
-│   │   │       └── LaporanArusKasController.php
+│   │   │       ├── LaporanPeminjamanController.php
+│   │   │       ├── LaporanPengembalianController.php
+│   │   │       ├── LaporanDendaController.php
+│   │   │       └── LaporanTahunanController.php
 │   │   │
-│   │   ├── Penyewa/
+│   │   ├── Anggota/
 │   │   │   ├── DashboardController.php
 │   │   │   ├── ProfilController.php
-│   │   │   ├── PemesananController.php
-│   │   │   └── PembayaranController.php
+│   │   │   ├── PeminjamanController.php
+│   │   │   ├── PengembalianController.php
+│   │   │   └── RiwayatController.php
 │   │   │
 │   │   └── Middleware/
 │   │       ├── RoleMiddleware.php
-│   │       └── PenyewaMiddleware.php
+│   │       └── AnggotaMiddleware.php
 │   │
 │   ├── Models/
 │   │   ├── User.php
-│   │   ├── Penyewa.php
+│   │   ├── Anggota.php
 │   │   ├── Kategori.php
 │   │   ├── Merk.php
 │   │   ├── Kondisi.php
+│   │   ├── Ruangan.php
 │   │   ├── Alat.php
-│   │   ├── Pemesanan.php
-│   │   ├── DetailPemesanan.php
-│   │   ├── Pembayaran.php
+│   │   ├── Peminjaman.php
+│   │   ├── DetailPeminjaman.php
+│   │   ├── Pengembalian.php
 │   │   ├── Denda.php
 │   │   ├── Artikel.php
 │   │   └── Komentar.php
@@ -68,22 +75,36 @@ sewaalatahmadi/
 ├── database/
 │   ├── migrations/
 │   │   ├── create_users_table.php
-│   │   ├── create_penyewas_table.php
+│   │   ├── create_anggotas_table.php
 │   │   ├── create_kategoris_table.php
 │   │   ├── create_merks_table.php
 │   │   ├── create_kondisis_table.php
+│   │   ├── create_ruangans_table.php
 │   │   ├── create_alats_table.php
-│   │   ├── create_pemesanans_table.php
-│   │   ├── create_detail_pemesanans_table.php
-│   │   ├── create_pembayarans_table.php
+│   │   ├── create_peminjamans_table.php
+│   │   ├── create_detail_peminjamans_table.php
+│   │   ├── create_pengembalians_table.php
 │   │   ├── create_dendas_table.php
 │   │   ├── create_artikels_table.php
 │   │   └── create_komentars_table.php
 │   │
 │   └── seeders/
 │       ├── UserSeeder.php
-│       ├── PenyewaSeeder.php
+│       ├── AnggotaSeeder.php
+│       ├── KategoriSeeder.php
+│       ├── AlatSeeder.php
 │       └── DatabaseSeeder.php
+│
+├── public/
+│   ├── adminlte/
+│   ├── uploads/
+│   │   ├── alat/
+│   │   ├── anggota/
+│   │   ├── peminjaman/
+│   │   ├── pengembalian/
+│   │   └── artikel/
+│   │
+│   └── index.php
 │
 ├── resources/
 │   ├── views/
@@ -91,20 +112,62 @@ sewaalatahmadi/
 │   │   ├── layouts/
 │   │   │   ├── guest.blade.php
 │   │   │   ├── user.blade.php
-│   │   │   └── penyewa.blade.php
-│   │
+│   │   │   └── anggota.blade.php
+│   │   │
 │   │   ├── components/
 │   │   │   ├── navbar/
 │   │   │   ├── sidebar/
 │   │   │   └── footer/
-│   │
+│   │   │
 │   │   ├── landing/
+│   │   │   ├── home.blade.php
+│   │   │   ├── tentang.blade.php
+│   │   │   ├── kontak.blade.php
+│   │   │   ├── kategori.blade.php
+│   │   │   ├── daftaralat.blade.php
+│   │   │   ├── detailalat.blade.php
+│   │   │   ├── artikel.blade.php
+│   │   │   └── detailartikel.blade.php
+│   │   │
 │   │   ├── auth/
+│   │   │   ├── loginuser.blade.php
+│   │   │   ├── loginanggota.blade.php
+│   │   │   └── registeranggota.blade.php
+│   │   │
 │   │   ├── user/
-│   │   ├── penyewa/
+│   │   │   ├── dashboard/
+│   │   │   ├── user/
+│   │   │   ├── anggota/
+│   │   │   ├── kategori/
+│   │   │   ├── merk/
+│   │   │   ├── kondisi/
+│   │   │   ├── ruangan/
+│   │   │   ├── alat/
+│   │   │   ├── peminjaman/
+│   │   │   ├── pengembalian/
+│   │   │   ├── denda/
+│   │   │   ├── artikel/
+│   │   │   ├── komentar/
+│   │   │   └── laporan/
+│   │   │
+│   │   ├── anggota/
+│   │   │   ├── dashboard/
+│   │   │   ├── profil/
+│   │   │   ├── peminjaman/
+│   │   │   ├── pengembalian/
+│   │   │   └── riwayat/
+│   │   │
 │   │   └── errors/
+│   │       ├── 403.blade.php
+│   │       ├── 404.blade.php
+│   │       └── 500.blade.php
 │
 ├── routes/
 │   ├── web.php
 │   ├── user.php
-│   └── penyewa.php
+│   └── anggota.php
+│
+├── storage/
+├── tests/
+├── .env
+└── artisan

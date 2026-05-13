@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers\Landing;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+
+class KontakController extends Controller
+{
+    public function index()
+    {
+        return view('landing.kontak');
+    }
+
+    public function kirim(Request $request)
+    {
+        $request->validate([
+            'nama'    => 'required',
+            'email'   => 'required|email',
+            'pesan'   => 'required',
+        ]);
+
+        return back()->with('success', 'Pesan berhasil dikirim');
+    }
+}
